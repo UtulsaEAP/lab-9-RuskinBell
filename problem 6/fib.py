@@ -3,12 +3,15 @@ def fibonacci(n):
     fib_num = 1
     last_num = 0
 
-    for i in range(n):
-        fib_num = fib_num + last_num
-        last_num = fib_num
-
-        print(fib_num)
-        
+    if n == 0:
+        fib_num = 0
+    elif n <= 0:
+        fib_num = -1
+    else:
+        for i in range(n-1):
+            set_num = fib_num + last_num
+            last_num = fib_num
+            fib_num = set_num
 
     return fib_num
 
